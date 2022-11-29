@@ -40,41 +40,57 @@ amp-img img {
 
 #top {
 	background: #2EA1E0;
-	padding: 6px;
+	padding: 10px;
+}
+
+#top>div {
+	margin: auto;
+	max-width: 1824px;
 }
 
 #top a {
 	display: flex;
+	float: left;
 	justify-content: center;
 }
 
 #logo {
 	display: block;
+	float: left;
 	margin-bottom: 6px;
 }
 
-@media ( min-width :880px) {
-	#logo {
-		margin-left: auto;
-		margin-right: auto;
-	}
-}
-
 #search {
-	background: white;
 	display: -webkit-box;
 	display: -moz-box;
 	display: -ms-flexbox;
 	display: -webkit-flex;
 	display: flex;
-	height: 30px;
+
+	background-color: rgba(243,244,246);
+	border-radius: .75rem;
+	box-sizing: border-box;
+	clear: left;
+	padding: .5rem .75rem;
+	width: 100%;
+}
+
+@media only screen and (min-width: 500px) {
+	#search {
+		clear: none;
+		float: right;
+		margin-right: 110px;
+		max-width: 400px;
+	}
 }
 
 #search .q {
+	background-color: rgba(243,244,246);
 	border: none;
 	font-size: 16px;
+	height: 30px;
 	line-height: 20px;
-	padding: 3px 0 3px 5px;
+	padding: 1px;
 	width: 100%;
 }
 
@@ -86,10 +102,16 @@ amp-img img {
 	line-height: 21px;
 }
 
+#top br {
+	clear: both;
+	display: block;
+	height: 0;
+}
+
 #share-buttons {
 	position: absolute;
-	right: 6px;
-	top: 6px;
+	right: 10px;
+	top: 10px;
 }
 
 #share-buttons a {
@@ -168,8 +190,9 @@ amp-img img {
 }
 
 #hot-articles {
+	margin: auto;
+	max-width: 1824px;
 	overflow: hidden;
-	width: 100%;
 }
 
 #hot-articles .inner {
@@ -212,11 +235,11 @@ amp-img img {
 }
 
 #menu, .menu {
+	display: table;
 	height: 25px;
 	margin: 12px auto;
 	max-width: 880px;
 	overflow: hidden;
-	width: 100%;
 	max-width: 880px;
 }
 
@@ -258,9 +281,9 @@ amp-img img {
 	color: #2EA1E0;
 }
 
-#main {
+#main, #similar>div {
 	margin: auto;
-	max-width: 880px;
+	max-width: 677px;
 	min-height: 50%;
 }
 
@@ -478,12 +501,15 @@ body.profile h2 {
 </script>
 </amp-analytics>
 <div id="top">
-	<a href="/"><amp-img height="47" width="150" layout="intrinsic" alt="自由微信" id="logo" src="" /></amp-img></a>
-	<form action="/search" method="GET" target="_top" id="search">
-		<input class="q" type="search" name="q"
-			value="" />
-		<input type="submit" class="s" value="">
-	</form>
+	<div>
+		<a href="/"><amp-img height="47" width="150" layout="intrinsic" alt="自由微信" id="logo" src="" /></amp-img></a>
+		<form action="/search" method="GET" target="_top" id="search">
+			<input class="q" type="search" name="q"
+				value="" placeholder="输入关键词" />
+			<input type="submit" class="s" value="">
+		</form>
+	</div>
+	<br>
 </div>
 <amp-carousel height="165" layout="fixed-height" type="carousel" autoplay delay="2000" role="region" id="hot-articles">
 	<div class="hot-article"><a href="/a/MzI2MDYwNzg2NQ==/2247486383/1"><amp-img height="165" width=auto layout="fixed-height" src=""></amp-img><div><h3>现场有坏人</h3></div></a></div><div class="hot-article"><a href="/a/MzI3NzY2NDkwMA==/2247485080/1"><amp-img height="165" width=auto layout="fixed-height" src=""></amp-img><div><h3>孩子们，不要怕</h3></div></a></div><div class="hot-article"><a href="/a/MzU3NDA0MTcwOQ==/2247488674/1"><amp-img height="165" width=auto layout="fixed-height" src=""></amp-img><div><h3>路是通的，是他们不跑</h3></div></a></div><div class="hot-article"><a href="/a/MzI5MTI3Njk5OQ==/2247488122/1"><amp-img height="165" width=auto layout="fixed-height" src=""></amp-img><div><h3>林世钰 | 这是凌晨四点零八分的中国（诗一首）</h3></div></a></div><div class="hot-article"><a href="/a/MzIzNTk2NTgwNw==/2247489476/1"><amp-img height="165" width=auto layout="fixed-height" src=""></amp-img><div><h3>她们生命的最后时光，是在那个屋子里待了一百多天</h3></div></a></div></amp-carousel>
@@ -1343,9 +1369,9 @@ body.profile h2 {
 	自由微信于2016年由 <a href="https://zh.greatfire.org/" target="_blank">GreatFire.org</a>建立。
 		<!--
 		<div class="timers">
-				<label>total:</label> 0.48 s<br />
+				<label>total:</label> 0.28 s<br />
 				<label>elastic:</label> 0.05 s<br />
-				<label>db hits:</label> 0.07 s<br />
+				<label>db hits:</label> 0.08 s<br />
 			</div>
 		-->
 	</div>
